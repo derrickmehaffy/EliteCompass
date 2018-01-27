@@ -10,5 +10,7 @@ To add a heading (which is required for the bearing to work) press control+shift
 
 By default it will look for your journal file in the saved games directory of your user profile. Otherwise it will prompt for settings for you to browse for the directory for the journal.
 
+After a destination is entered the bearing will be updated and arrows indicating what direction to turn to get to the correct heading.
+
 Note:
 This is only compatible with the Elite Dangerous Beyond Open Beta since it requires the status.json file

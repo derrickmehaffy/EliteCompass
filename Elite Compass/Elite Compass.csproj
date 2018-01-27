@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -54,11 +57,11 @@
     <Compile Include="Compass.Designer.cs">
       <DependentUpon>Compass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Heading.cs">
+    <Compile Include="Destination.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Heading.Designer.cs">
-      <DependentUpon>Heading.cs</DependentUpon>
+    <Compile Include="Destination.Designer.cs">
+      <DependentUpon>Destination.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,8 +76,8 @@
     <EmbeddedResource Include="Compass.resx">
       <DependentUpon>Compass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Heading.resx">
-      <DependentUpon>Heading.cs</DependentUpon>
+    <EmbeddedResource Include="Destination.resx">
+      <DependentUpon>Destination.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

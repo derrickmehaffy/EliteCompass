@@ -63,14 +63,14 @@
             this.toolStripMenuItem2,
             this.exitToolStripMenuItem});
             this.edCompassMenu.Name = "edCompassMenu";
-            this.edCompassMenu.Size = new System.Drawing.Size(214, 104);
+            this.edCompassMenu.Size = new System.Drawing.Size(232, 126);
             this.edCompassMenu.Opening += new System.ComponentModel.CancelEventHandler(this.edCompassMenu_Opening);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F9)));
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.viewToolStripMenuItem.Text = "&View";
             this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
             // 
@@ -78,32 +78,32 @@
             // 
             this.setHeadingToolStripMenuItem.Name = "setHeadingToolStripMenuItem";
             this.setHeadingToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.H)));
-            this.setHeadingToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
-            this.setHeadingToolStripMenuItem.Text = "Set &Heading";
+            | System.Windows.Forms.Keys.F9)));
+            this.setHeadingToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.setHeadingToolStripMenuItem.Text = "Set &Destination";
             this.setHeadingToolStripMenuItem.Click += new System.EventHandler(this.setHeadingToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 6);
             // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.settingsToolStripMenuItem.Text = "&Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(210, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(228, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -115,26 +115,27 @@
             // HeadingRight
             // 
             this.HeadingRight.AutoSize = true;
-            this.HeadingRight.BackColor = System.Drawing.Color.Black;
+            this.HeadingRight.BackColor = System.Drawing.Color.Transparent;
             this.HeadingRight.Font = new System.Drawing.Font("Wingdings 3", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.HeadingRight.ForeColor = System.Drawing.Color.White;
-            this.HeadingRight.Location = new System.Drawing.Point(370, 24);
+            this.HeadingRight.Image = ((System.Drawing.Image)(resources.GetObject("HeadingRight.Image")));
+            this.HeadingRight.Location = new System.Drawing.Point(115, 4);
             this.HeadingRight.Name = "HeadingRight";
-            this.HeadingRight.Size = new System.Drawing.Size(92, 73);
+            this.HeadingRight.Size = new System.Drawing.Size(96, 73);
             this.HeadingRight.TabIndex = 0;
-            this.HeadingRight.Text = "a";
+            this.HeadingRight.Text = " ";
             this.HeadingRight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.HeadingRight.Click += new System.EventHandler(this.HeadingRight_Click);
             this.HeadingRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeadingRight_MouseDown);
             // 
             // bearingLabel
             // 
-            this.bearingLabel.BackColor = System.Drawing.Color.DimGray;
-            this.bearingLabel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bearingLabel.ForeColor = System.Drawing.Color.White;
-            this.bearingLabel.Location = new System.Drawing.Point(255, 39);
+            this.bearingLabel.BackColor = System.Drawing.Color.Transparent;
+            this.bearingLabel.Font = new System.Drawing.Font("Courier Std", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bearingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(202)))), ((int)(((byte)(195)))));
+            this.bearingLabel.Location = new System.Drawing.Point(70, 23);
             this.bearingLabel.Name = "bearingLabel";
-            this.bearingLabel.Size = new System.Drawing.Size(78, 37);
+            this.bearingLabel.Size = new System.Drawing.Size(74, 37);
             this.bearingLabel.TabIndex = 7;
             this.bearingLabel.Text = "000";
             this.bearingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,14 +145,15 @@
             // HeadingLeft
             // 
             this.HeadingLeft.AutoSize = true;
-            this.HeadingLeft.BackColor = System.Drawing.Color.Black;
+            this.HeadingLeft.BackColor = System.Drawing.Color.Transparent;
             this.HeadingLeft.Font = new System.Drawing.Font("Wingdings 3", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.HeadingLeft.ForeColor = System.Drawing.Color.White;
-            this.HeadingLeft.Location = new System.Drawing.Point(126, 24);
+            this.HeadingLeft.Image = ((System.Drawing.Image)(resources.GetObject("HeadingLeft.Image")));
+            this.HeadingLeft.Location = new System.Drawing.Point(5, 4);
             this.HeadingLeft.Name = "HeadingLeft";
-            this.HeadingLeft.Size = new System.Drawing.Size(92, 73);
+            this.HeadingLeft.Size = new System.Drawing.Size(96, 73);
             this.HeadingLeft.TabIndex = 8;
-            this.HeadingLeft.Text = "`";
+            this.HeadingLeft.Text = " ";
             this.HeadingLeft.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.HeadingLeft.Click += new System.EventHandler(this.HeadingLeft_Click);
             this.HeadingLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeadingLeft_MouseDown);
@@ -161,11 +163,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(590, 120);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(215, 80);
             this.ControlBox = false;
-            this.Controls.Add(this.HeadingLeft);
             this.Controls.Add(this.bearingLabel);
             this.Controls.Add(this.HeadingRight);
+            this.Controls.Add(this.HeadingLeft);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Compass";

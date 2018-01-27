@@ -16,6 +16,9 @@ namespace Elite_Compass
 {
     public partial class Compass : Form
     {
+        private bool dialogDestinationOpen=false;
+        private bool dialogSettingsOpen=false;
+
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -75,11 +78,20 @@ namespace Elite_Compass
 
                 if (hotkeyId == 0)
                 {
+                    //Have a destination?
+                    if(!(Program.appSettings.Latitude == 0 && Program.appSettings.Longitude == 0))
+                    {
+                        //We need a destination.
+                        ShowDestination();
+                    }
+                    
+                    //Toggle visibility
                     this.Visible = !(this.Visible);
+
                 }
                 else
                 {
-                    ShowHeading();
+                    ShowDestination();
                 }
             }
         }
@@ -144,6 +156,7 @@ namespace Elite_Compass
 
             //Start reading the file (if it exists)
             compassTimer.Enabled = true;
+          
 
         }
 
@@ -188,7 +201,7 @@ namespace Elite_Compass
             }
             catch(Exception readError)
             {
-                bearingLabel.Text = "???";
+                bearingLabel.Text = "---";
                 HeadingLeft.Visible = false;
                 HeadingRight.Visible = false;
 
@@ -203,16 +216,32 @@ namespace Elite_Compass
         }
         
 
-        private void ShowHeading()
+        private void ShowDestination()
         {
-            Heading headingForm = new Heading();
+            //Already open
+            if (dialogDestinationOpen)
+            {
+                return;
+            }
+            
+            //Open
+            dialogDestinationOpen = true;
+            Destination headingForm = new Destination();
             headingForm.ShowDialog();
+            dialogDestinationOpen = false;
         }
 
         private void ShowSettings()
         {
+            if (dialogSettingsOpen)
+            {
+                //Already open
+                return;
+            }
+            dialogSettingsOpen = true;
             SettingsForm settings = new SettingsForm();
             settings.ShowDialog();
+            dialogSettingsOpen = false;
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -260,7 +289,7 @@ namespace Elite_Compass
 
         private void setHeadingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowHeading();
+            ShowDestination();
         }
 
         private void compassTimer_Tick(object sender, EventArgs e)
@@ -292,10 +321,7 @@ namespace Elite_Compass
 
         private void HeadingLeft_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                MouseDrag();
-            }
+            
         }
 
         private void bearingLabel_MouseDown(object sender, MouseEventArgs e)
@@ -308,10 +334,7 @@ namespace Elite_Compass
 
         private void HeadingRight_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                MouseDrag();
-            }
+            
         }
     }
 }

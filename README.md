@@ -3,14 +3,25 @@ A simple compass example that allows you to enter a destination and it will auto
 
 ![Screenshot](https://raw.githubusercontent.com/canonn-science/EliteCompass/master/media/screenshot.png)
 
-Usage:
-Extract and run the executable from pre-release-01.zip. Control + F9 toggles the display of the bearing (it will auto hide/show when you're within range of a body with lat/lon.
+## Note: Beta Release 
+This is only compatible with the Elite Dangerous Beyond Open Beta since it requires the status.json.
 
-To add a heading (which is required for the bearing to work) press control+shift+F9 or right click on the system tray icon and select "Heading"
+## Usage
+Follow instructions in the latest release to install and run "Elite Compass.exe"
 
-By default it will look for your journal file in the saved games directory of your user profile. Otherwise it will prompt for settings for you to browse for the directory for the journal.
+#### Display
+The compass will display when you are on or near a body with a latitude/longitude position AND you have set a destination.
 
-After a destination is entered the bearing will be updated and arrows indicating what direction to turn to get to the correct heading.
+The compass will automatically hide when you are no longer near a body with latitude/longitude or you don't have a destination set.
 
-Note:
-This is only compatible with the Elite Dangerous Beyond Open Beta since it requires the status.json file
+Control + F9 toggles the display of the compass if you wish to hide it.
+
+#### Adding a Destination
+Control + Shift + F9 (or right click system tray icon and select "Set Destination")
+
+Enter the latitude/longitude individually or type/paste it in the "Lat/Lng" textbox
+
+## Settings
+By default it will look for your journal file in the saved games directory of your user profile. 
+
+Otherwise the settings dialog will open allowing you to browse and select the journal directory

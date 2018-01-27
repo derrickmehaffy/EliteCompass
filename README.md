@@ -1,7 +1,7 @@
 # Elite Compass
 A simple compass example that allows you to enter a destination and it will automatically update the bearing towards that point.
 
-![Screenshot](https://raw.githubusercontent.com/canonn-science/EliteCompass/media/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/canonn-science/EliteCompass/master/media/screenshot.png)
 
 Usage:
 Extract and run the executable from pre-release-01.zip. Control + F9 toggles the display of the bearing (it will auto hide/show when you're within range of a body with lat/lon.
